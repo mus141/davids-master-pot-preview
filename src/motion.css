@@ -1,0 +1,304 @@
+/* ============================================================
+   MOTION LAYER
+   Every animation serves the concept: heat rising, the pot
+   coming to a boil, the seal stamping down. Nothing moves
+   decoratively. All of it yields to prefers-reduced-motion.
+   ============================================================ */
+
+/* ---------- 1. Loading screen: the pot coming to the boil ---- */
+.loader { display: none; }
+.js .loader {
+  display: grid;
+  position: fixed; inset: 0; z-index: 9999;
+  background: var(--crimson);
+  display: grid; place-items: center;
+  transition: opacity .6s ease, visibility .6s;
+}
+.loader[data-done] { opacity: 0; visibility: hidden; }
+.loader__in { display: grid; place-items: center; gap: var(--s-5); text-align: center; }
+
+/* Concentric seal rings, drawn then stamped */
+.loader__seal {
+  width: 132px; height: 132px; position: relative;
+  display: grid; place-items: center;
+  color: var(--cream-light);
+}
+.loader__ring {
+  position: absolute; inset: 0; border-radius: 50%;
+  border: 3px solid currentColor; opacity: .25;
+}
+.loader__ring:nth-child(2) { inset: 12px; opacity: .45; }
+.loader__ring--spin {
+  inset: 0; opacity: 1;
+  border-color: var(--gold) transparent transparent transparent;
+  animation: ringspin 1.05s cubic-bezier(.65,.05,.36,1) infinite;
+}
+@keyframes ringspin { to { transform: rotate(360deg); } }
+
+.loader__mark {
+  font-family: var(--font-display); font-size: 38px; line-height: 1;
+  color: var(--cream-light); letter-spacing: .02em;
+  animation: pulse 1.6s ease-in-out infinite;
+}
+@keyframes pulse { 0%,100% { transform: scale(1); opacity: 1; } 50% { transform: scale(.92); opacity: .72; } }
+
+.loader__word {
+  font-size: var(--t--1); text-transform: uppercase; letter-spacing: .28em;
+  color: var(--cream-light); opacity: .75;
+}
+:root[data-lang="zh"] .loader__word { letter-spacing: .12em; }
+
+.loader__bar { width: 168px; height: 3px; background: rgba(245,236,221,.25); overflow: hidden; }
+.loader__bar i { display: block; height: 100%; width: 0%; background: var(--gold); transition: width .25s ease; }
+
+/* Steam rising off the loader seal */
+.steam { position: absolute; top: -34px; left: 50%; transform: translateX(-50%); display: flex; gap: 9px; }
+.steam b {
+  display: block; width: 5px; height: 26px; border-radius: 3px;
+  background: linear-gradient(to top, transparent, var(--cream-light));
+  opacity: 0; animation: rise 2.1s ease-in-out infinite;
+}
+.steam b:nth-child(2) { animation-delay: .35s; height: 34px; }
+.steam b:nth-child(3) { animation-delay: .7s; }
+@keyframes rise {
+  0%   { opacity: 0; transform: translateY(8px) scaleY(.5); }
+  35%  { opacity: .85; }
+  100% { opacity: 0; transform: translateY(-22px) scaleY(1.15); }
+}
+
+.js body[data-loading] { overflow: hidden; }
+
+/* ---------- 2. Scroll reveals -------------------------------- */
+.js [data-rv] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .85s cubic-bezier(.22,.61,.36,1), transform .85s cubic-bezier(.22,.61,.36,1);
+  transition-delay: var(--rv-d, 0ms);
+  will-change: opacity, transform;
+}
+.js [data-rv="left"]  { transform: translateX(-34px); }
+.js [data-rv="right"] { transform: translateX(34px); }
+.js [data-rv="scale"] { transform: scale(.94); }
+.js [data-rv].is-in   { opacity: 1; transform: none; }
+
+/* Headline wipe: each line clipped, then released */
+.rv-lines span { display: block; overflow: hidden; }
+.js .rv-lines span > i {
+  display: block; font-style: normal;
+  transform: translateY(105%);
+  transition: transform .95s cubic-bezier(.22,.61,.36,1);
+  transition-delay: var(--rv-d, 0ms);
+}
+.js .rv-lines.is-in span > i { transform: translateY(0); }
+
+/* ---------- 3. Hero motion ---------------------------------- */
+.hero__mascot { aspect-ratio: 1; animation: bob 5.5s ease-in-out infinite; transform-origin: 50% 90%; }
+@keyframes bob { 0%,100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-14px) rotate(-1.4deg); } }
+
+.hero__stamp { animation: stamp .7s cubic-bezier(.22,.61,.36,1) .35s both; }
+@keyframes stamp {
+  0%   { transform: rotate(-12deg) scale(1.9); opacity: 0; }
+  100% { transform: rotate(-12deg) scale(1); opacity: 1; }
+}
+
+/* Heat haze behind the hero mascot */
+.hero__glow {
+  position: absolute; inset: -12% -8% -18% -8%; z-index: -1;
+  background: radial-gradient(closest-side, rgba(242,183,5,.55), transparent 72%);
+  animation: breathe 6s ease-in-out infinite;
+}
+@keyframes breathe { 0%,100% { transform: scale(1); opacity: .75; } 50% { transform: scale(1.12); opacity: 1; } }
+
+/* ---------- 4. Category tiles (the reference's strongest move) */
+.tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: var(--rule-w) solid var(--ink); }
+.tile {
+  position: relative; aspect-ratio: 1; overflow: hidden;
+  border-right: var(--rule-w) solid var(--ink);
+  border-bottom: var(--rule-w) solid var(--ink);
+  background: var(--tile-bg, var(--crimson));
+  display: grid; place-items: center; text-align: center;
+  padding: var(--s-5);
+  isolation: isolate;
+}
+.tile:nth-child(4n) { border-right: 0; }
+.tile__img {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: contain; padding: 14%;
+  transition: transform .7s cubic-bezier(.22,.61,.36,1);
+  z-index: 1;
+}
+.tile__label {
+  position: relative; z-index: 2; align-self: end;
+  font-family: var(--font-display); font-size: var(--t-2);
+  text-transform: uppercase; line-height: .95; color: var(--cream-light);
+  text-shadow: 0 2px 0 rgba(0,0,0,.35);
+  transition: transform .45s cubic-bezier(.22,.61,.36,1);
+}
+:root[data-lang="zh"] .tile__label { text-transform: none; font-weight: 900; line-height: 1.2; }
+.tile__go {
+  position: absolute; z-index: 2; inset: auto var(--s-4) var(--s-4) auto;
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--gold); color: var(--ink);
+  display: grid; place-items: center; font-size: 19px; font-weight: 700;
+  transform: scale(0) rotate(-45deg); transition: transform .4s cubic-bezier(.22,.61,.36,1);
+}
+.tile:hover .tile__img { transform: scale(1.14) rotate(-3deg); }
+.tile:hover .tile__label { transform: translateY(-46px); }
+.tile:hover .tile__go { transform: scale(1) rotate(0deg); }
+.tile::after {
+  content: ""; position: absolute; inset: 0; z-index: 1;
+  background: var(--ink); opacity: 0; transition: opacity .4s;
+}
+.tile:hover::after { opacity: .18; }
+
+/* ---------- 5. Counters -------------------------------------- */
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s-6); }
+.stat__n {
+  font-family: var(--font-display); font-size: var(--t-5); line-height: .9;
+  color: var(--gold); display: block; font-variant-numeric: tabular-nums;
+}
+.stat__l { font-size: var(--t--1); text-transform: uppercase; letter-spacing: .16em; font-weight: 700; margin-top: var(--s-2); opacity: .85; }
+:root[data-lang="zh"] .stat__l { letter-spacing: .06em; }
+
+/* ---------- 6. Parallax strip -------------------------------- */
+.para { overflow: hidden; position: relative; height: clamp(320px, 46vw, 560px); border-block: var(--rule-heavy) solid var(--ink); }
+.para__img { position: absolute; inset: -14% 0; width: 100%; height: 128%; object-fit: cover; will-change: transform; }
+.para__cap {
+  position: absolute; inset: auto 0 0 0; padding: var(--s-6) var(--gutter);
+  background: linear-gradient(to top, rgba(20,16,14,.82), transparent);
+  color: var(--cream-light);
+}
+
+/* ---------- 7. Sticky order bar ------------------------------ */
+.orderbar {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 90;
+  background: var(--gold); color: var(--ink);
+  border-top: var(--rule-heavy) solid var(--ink);
+  transform: translateY(105%); transition: transform .45s cubic-bezier(.22,.61,.36,1);
+}
+.orderbar[data-show] { transform: translateY(0); }
+.orderbar__in { display: flex; align-items: center; gap: var(--s-4); padding-block: var(--s-3); }
+.orderbar p { font-weight: 700; margin-right: auto; font-size: var(--t-0); max-width: none; }
+@media (max-width: 620px) { .orderbar p { display: none; } .orderbar__in { justify-content: center; } }
+
+/* ---------- 8. Marquee speed-reacts to scroll ---------------- */
+.marquee__track { animation-duration: var(--mq-dur, 38s); }
+
+/* ---------- 9. Magnetic / press feedback --------------------- */
+.btn { will-change: transform; }
+.btn:active { transform: translateY(1px) scale(.985); }
+
+/* ---------- 10. Base card stagger + lift --------------------- */
+.base { transition: background .18s, transform .35s cubic-bezier(.22,.61,.36,1); }
+.base:hover { transform: translateY(-6px); z-index: 2; }
+.base__img { transition: transform .6s cubic-bezier(.22,.61,.36,1); }
+.base:hover .base__img { transform: scale(1.07) rotate(-2deg); }
+
+.store { transition: transform .35s cubic-bezier(.22,.61,.36,1), background .25s; }
+.store:hover { transform: translateY(-6px); background: var(--gold); }
+.store img { transition: transform .6s cubic-bezier(.22,.61,.36,1); }
+.store:hover img { transform: scale(1.06); }
+
+/* ---------- 11. Progress rail -------------------------------- */
+.progress { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); z-index: 120; width: 0; }
+
+/* ---------- Reduced motion: switch everything off ------------ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .001ms !important; animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important; scroll-behavior: auto !important;
+  }
+  [data-rv] { opacity: 1 !important; transform: none !important; }
+  .rv-lines span > i { transform: none !important; }
+  .hero__mascot, .hero__glow, .steam b, .loader__mark { animation: none !important; }
+  .para__img { transform: none !important; }
+}
+
+@media (max-width: 900px) {
+  .tiles { grid-template-columns: repeat(2, 1fr); }
+  .tile:nth-child(4n) { border-right: var(--rule-w) solid var(--ink); }
+  .tile:nth-child(2n) { border-right: 0; }
+  .stats { grid-template-columns: repeat(2, 1fr); gap: var(--s-5); }
+}
+
+@keyframes cardIn { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+
+/* Burger morphs to an X */
+.burger[data-x] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.burger[data-x] span:nth-child(2) { opacity: 0; }
+.burger[data-x] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ============================================================
+   AWWWARDS-TIER SCROLL BEATS
+   Technique adapted from scroll-choreographed food sites
+   (pinned sections, horizontal rails, reach statements),
+   rendered in DMP's own enamel-signage language.
+   ============================================================ */
+
+/* ---------- A. Pinned horizontal broth rail ------------------
+   Without JS this degrades to a normal swipeable overflow rail,
+   so it is never blank and never traps the scroll.            */
+.hrail { position: relative; }
+.js .hrail { height: 360vh; }
+
+.hrail__pin { overflow-x: auto; overflow-y: hidden; padding-block: var(--s-7); }
+.js .hrail__pin {
+  position: sticky; top: 0; height: 100vh;
+  overflow: hidden; display: flex; align-items: center;
+  padding-block: 0;
+}
+.hrail__track { display: flex; gap: var(--s-6); align-items: stretch; padding-inline: var(--gutter); }
+.js .hrail__track { will-change: transform; padding-inline: 0; }
+
+.hcard {
+  flex: 0 0 clamp(260px, 30vw, 400px);
+  border: var(--rule-heavy) solid var(--ink);
+  background: var(--cream-light);
+  display: flex; flex-direction: column;
+  position: relative; overflow: hidden;
+}
+.hcard__n {
+  position: absolute; top: 0; right: 0; z-index: 2;
+  font-family: var(--font-display); font-size: var(--t-4); line-height: 1;
+  color: var(--cream-light); background: var(--ink);
+  padding: var(--s-2) var(--s-3);
+}
+.hcard img { aspect-ratio: 4/3; object-fit: cover; width: 100%; border-bottom: var(--rule-heavy) solid var(--ink); }
+.hcard__body { padding: var(--s-5); display: flex; flex-direction: column; gap: var(--s-3); flex: 1; }
+.hcard h3 { font-family: var(--font-display); font-size: var(--t-2); text-transform: uppercase; line-height: 1; }
+:root[data-lang="zh"] .hcard h3 { text-transform: none; font-weight: 900; line-height: 1.25; }
+.hcard p { font-size: var(--t-0); color: var(--text-mute); }
+
+/* Rail header sits above the track, pinned with it */
+.hrail__head { position: absolute; top: var(--s-7); left: var(--gutter); right: var(--gutter); z-index: 3; pointer-events: none; }
+.js .hrail__head { position: absolute; }
+.hrail__bar { position: absolute; left: var(--gutter); right: var(--gutter); bottom: var(--s-7); height: var(--rule-w); background: rgba(20,16,14,.2); z-index: 3; }
+.hrail__bar i { display: block; height: 100%; width: 0%; background: var(--crimson); }
+
+/* ---------- B. Reach beat: the network lighting up ---------- */
+.reach { position: relative; }
+.js .reach { height: 300vh; }
+.reach__pin { padding-block: var(--s-9); }
+.js .reach__pin { position: sticky; top: 0; height: 100vh; display: grid; place-items: center; overflow: hidden; }
+.reach__fig {
+  font-family: var(--font-display); line-height: .82;
+  font-size: clamp(4rem, 17vw, 15rem);
+  color: var(--gold); font-variant-numeric: tabular-nums;
+}
+:root[data-lang="zh"] .reach__fig { font-weight: 900; line-height: 1; }
+.reach__word { font-size: var(--t-2); text-transform: uppercase; letter-spacing: .2em; font-weight: 700; }
+:root[data-lang="zh"] .reach__word { letter-spacing: .08em; text-transform: none; }
+.reach__states { display: flex; flex-wrap: wrap; gap: var(--s-3); justify-content: center; margin-top: var(--s-6); }
+.reach__state {
+  border: var(--rule-w) solid currentColor; border-radius: 999px;
+  padding: 8px var(--s-4); font-size: var(--t--1); font-weight: 700;
+  text-transform: uppercase; letter-spacing: .12em; opacity: .28;
+  transition: opacity .4s, background .4s, color .4s;
+}
+.reach__state.is-lit { opacity: 1; background: var(--gold); color: var(--ink); border-color: var(--gold); }
+:root[data-lang="zh"] .reach__state { letter-spacing: .04em; }
+
+@media (max-width: 760px) {
+  .js .hrail { height: 300vh; }
+  .hcard { flex-basis: 76vw; }
+}

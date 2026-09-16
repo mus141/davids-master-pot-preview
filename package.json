@@ -1,0 +1,10 @@
+{
+  "name": "davids-master-pot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bilingual (EN/ZH) static site for David's Master Pot",
+  "scripts": {
+    "build": "node emit.js",
+    "serve": "npx -y serve build -l 4700"
+  }
+}

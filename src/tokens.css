@@ -1,0 +1,70 @@
+/* ============================================================
+   DAVID'S MASTER POT — design tokens
+   Art direction: vintage Chinese enamel canteen signage on a
+   Swiss grid. Flat fields, hard edges, stamped seals.
+   No gradients. No soft shadows. No global border-radius.
+   ============================================================ */
+
+:root {
+  /* --- Colour -------------------------------------------------
+     60% cream ground / 30% crimson fields / 10% gold accent.
+     Every value traces to the client's live brand tokens.      */
+  --crimson:      hsl(352, 87%, 40%);   /* #C20E23 brand primary */
+  --crimson-deep: hsl(352, 87%, 29%);   /* shade, for rules + hovers */
+  --red:          hsl(2,   65%, 52%);   /* #D73530 secondary */
+  --gold:         hsl(45,  96%, 48%);   /* #F2B705 accent, 10% only */
+  --gold-deep:    hsl(41,  90%, 40%);
+  --cream:        hsl(42,  58%, 89%);   /* #F3E9D2 dominant ground */
+  --cream-light:  hsl(39,  55%, 92%);   /* #F5ECDD */
+  --ink:          hsl(20,  17%, 7%);    /* #14100E warm near-black */
+  --ink-soft:     hsl(20,  10%, 34%);   /* captions, meta */
+
+  /* Semantic roles */
+  --bg:        var(--cream);
+  --bg-alt:    var(--cream-light);
+  --text:      var(--ink);
+  --text-mute: var(--ink-soft);
+  --rule:      var(--ink);
+
+  /* --- Type ---------------------------------------------------
+     One expressive display (Anton, condensed poster face) +
+     one workhorse grotesque (Archivo, already the brand face).
+     Noto Sans SC carries the Chinese build at real weights.    */
+  --font-display: "Anton", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-body:    "Archivo", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-mono:    "Archivo", ui-monospace, monospace;
+
+  /* Modular scale, base 17px, ratio 1.333 (perfect fourth).
+     Loud poster hierarchy, big jumps between steps.            */
+  --t--1: 0.75rem;    /* 12.75 — labels, allergens, fine print */
+  --t-0:  1.0625rem;  /* 17    — body */
+  --t-1:  1.4rem;     /* 23.8  — lede */
+  --t-2:  1.875rem;   /* 30    — section head */
+  --t-3:  2.5rem;     /* 40    — headline */
+  --t-4:  3.3rem;     /* 53    — display */
+  --t-5:  clamp(3.2rem, 8.4vw, 6rem);  /* hero, capped at 96px */
+
+  /* --- Spacing: strict 8pt grid with a 4pt half step --------- */
+  --s-1: 4px;   --s-2: 8px;   --s-3: 16px;  --s-4: 24px;
+  --s-5: 32px;  --s-6: 48px;  --s-7: 64px;  --s-8: 96px;
+  --s-9: 128px; --s-10: 160px;
+
+  /* --- Structure ---------------------------------------------- */
+  --maxw: 1320px;
+  --gutter: clamp(20px, 5vw, 64px);
+  --rule-w: 2px;
+  --rule-heavy: 4px;
+  --header-h: 72px;
+}
+
+/* The Chinese build needs its own vertical rhythm. Latin tracking
+   rules actively damage CJK: negative tracking closes counters and
+   tight leading collides with dense glyphs. */
+:root[data-lang="zh"] {
+  /* CJK ships from the device. Every mainland Windows machine has
+     Microsoft YaHei and every Apple device has PingFang SC, so the
+     Chinese build needs no webfont and no blocked CDN. */
+  --font-display: "PingFang SC", "Microsoft YaHei", "Source Han Sans SC", "Heiti SC", sans-serif;
+  --font-body:    "PingFang SC", "Microsoft YaHei", "Source Han Sans SC", "Heiti SC", sans-serif;
+  --t-5: clamp(2.6rem, 6.6vw, 5rem);  /* CJK reads larger per em */
+}

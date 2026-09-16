@@ -1,0 +1,13 @@
+# 47MB of original source imagery; the optimised WebP in assets/ is what ships
+assets-src/*.jpg
+assets-src/*.png
+assets-src/soup/
+assets-src/snack/
+assets-src/rice/
+assets-src/store/
+assets-src/hero/
+assets-src/brand/
+# poster export from an earlier session
+out/
+node_modules/
+.DS_Store

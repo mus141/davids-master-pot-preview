@@ -1,0 +1,420 @@
+{
+  "home": {
+    "en": {
+      "kicker": "Sichuan malatang · Since 2018",
+      "h1": "Build your own hot pot",
+      "sub": "Pick a broth. Stack your bowl. Pay by weight. There is no wrong way to do this.",
+      "storyKicker": "The house rule",
+      "storyH": "We don't plate it. You do.",
+      "storyBody": "Most restaurants decide what you eat. We decided not to. Walk the fridge, take what you want, as much or as little, then pick the broth it swims in. Our job is the broth, simmered from scratch every morning. The rest of the bowl is yours.\n\nSince 2018 that has taken us from one shop on Elizabeth Street to twenty across four states, which we take as a sign the country agrees.",
+      "basesKicker": "Seven broths",
+      "basesH": "Start here. Everything else is your call.",
+      "buildKicker": "Never done this?",
+      "buildH": "Three steps. That's the whole system.",
+      "steps": [
+        {
+          "n": "01",
+          "t": "Take a bowl",
+          "d": "Walk the fridge. Over 100 ingredients, fresh and frozen. Take what you like and skip what you don't."
+        },
+        {
+          "n": "02",
+          "t": "Weigh it",
+          "d": "One price per 100g. No per-item maths, no surprises at the till. Your bowl, your budget."
+        },
+        {
+          "n": "03",
+          "t": "Pick your broth",
+          "d": "Hand it over, name your base, find a seat. It comes out bubbling."
+        }
+      ],
+      "storesKicker": "Twenty shops, four states",
+      "storesH": "One is closer than you think",
+      "appKicker": "Club David",
+      "appH": "Eat more, pay less. That's the entire loyalty programme.",
+      "appBody": "Over $200 in vouchers the day you join, 100 points per $20 spent, and a permanent discount that grows with your membership level. Download the app and take 10% off your first order."
+    },
+    "zh": {
+      "kicker": "四川麻辣烫 · 始于 2018",
+      "h1": "自己的锅，自己配",
+      "sub": "选一锅汤底，装满自己的碗，按重量结账。怎么配都不会错。",
+      "storyKicker": "本店规矩",
+      "storyH": "菜不是我们配的，是你配的。",
+      "storyBody": "大多数餐厅替你决定吃什么，我们决定不这么做。自己走到冰柜前，想拿什么拿什么，想拿多少拿多少，再挑一锅汤底把它烫熟。我们负责的是汤，每天清早现熬。碗里的其余部分，归你。\n\n从 2018 年伊丽莎白街的第一家店，到如今横跨四州的二十家门店，我们当作是这个国家投的赞成票。",
+      "basesKicker": "七款汤底",
+      "basesH": "从这里开始，剩下的你说了算。",
+      "buildKicker": "第一次来？",
+      "buildH": "三步，就这么简单。",
+      "steps": [
+        {
+          "n": "01",
+          "t": "拿个碗",
+          "d": "走到冰柜前，一百多种食材，新鲜与冷冻任选。想要的就拿，不想要的直接跳过。"
+        },
+        {
+          "n": "02",
+          "t": "过秤",
+          "d": "统一按每 100 克计价。不用逐样算钱，结账不会有意外。碗有多大，你自己定。"
+        },
+        {
+          "n": "03",
+          "t": "选汤底",
+          "d": "递给店员，报上汤底，找位子坐下。端上来时还在翻滚。"
+        }
+      ],
+      "storesKicker": "四州二十店",
+      "storesH": "总有一家离你不远",
+      "appKicker": "大卫会员",
+      "appH": "吃得越多，付得越少。会员制度就这一句话。",
+      "appBody": "注册当天即送超过 200 澳元代金券，每消费 20 澳元累积 100 分，等级越高，永久折扣越大。下载应用，首单再减 10%。"
+    }
+  },
+  "menu": {
+    "en": {
+      "kicker": "The menu",
+      "h1": "Seven broths. Over 100 ingredients. One price per 100g.",
+      "sub": "The soup base is the only decision we make for you, and even that is a list of seven.",
+      "s1": "Soup bases",
+      "s2": "Small bites",
+      "s3": "Rice",
+      "note": "Allergen information is listed per item. Ask any staff member if you need detail beyond this."
+    },
+    "zh": {
+      "kicker": "菜单",
+      "h1": "七款汤底，百余种食材，统一按每 100 克计价。",
+      "sub": "汤底是我们唯一替你做的决定，而它也不过是一张七选一的单子。",
+      "s1": "汤底",
+      "s2": "小食",
+      "s3": "主食",
+      "note": "每道菜品均标注过敏原信息。如需更详细说明，请随时询问店员。"
+    }
+  },
+  "build": {
+    "en": {
+      "kicker": "How it works",
+      "h1": "You have done harder things than this.",
+      "sub": "Assisted self-serve means you build the bowl and we handle the fire. Here is the whole process, start to finish.",
+      "faqH": "Still wondering",
+      "faq": [
+        {
+          "q": "How much will it cost me?",
+          "a": "You pay by weight, at one price per 100g, so the bowl decides the bill. Load it with greens and noodles and it stays cheap. Load it with prawns and beef and it costs more. You can see the scale while it weighs."
+        },
+        {
+          "q": "How spicy is spicy?",
+          "a": "Our Signature Spicy Malatang and Stir-Fry Spicy Pot are properly numbing, the way Sichuan intends. If that is not your thing, Pork Bone, Tomato and Golden Pickled carry no chilli heat at all."
+        },
+        {
+          "q": "Is there anything for vegetarians?",
+          "a": "Plenty of the fridge is vegetarian, and the Umami Wild Mushroom Fried Rice is built for it. Note that most of our broths are started from pork or beef bones, so ask staff before choosing a base."
+        },
+        {
+          "q": "Is David's Master Pot halal?",
+          "a": "No. We are not halal-certified in Australia, and our signature broths use a pork bone base. We would rather tell you plainly than have you find out at the table."
+        },
+        {
+          "q": "Do I need to book?",
+          "a": "No. Walk in, take a bowl, join the queue at the scale. Most of our shops are built for turnover, not reservations."
+        }
+      ]
+    },
+    "zh": {
+      "kicker": "怎么吃",
+      "h1": "比这难的事你都做过。",
+      "sub": "半自助的意思是：碗由你配，火由我们管。以下是全过程。",
+      "faqH": "还有疑问",
+      "faq": [
+        {
+          "q": "大概要花多少钱？",
+          "a": "按重量计价，统一每 100 克一个价，所以碗决定账单。多装青菜和面，就便宜；多装虾和牛肉，就贵一些。过秤时秤面朝着你，看得一清二楚。"
+        },
+        {
+          "q": "到底有多辣？",
+          "a": "招牌麻辣烫和干锅麻辣是地道的四川麻辣，够麻够劲。若吃不惯，猪骨浓汤、香甜番茄汤和金汤酸菜完全不辣。"
+        },
+        {
+          "q": "有素食选择吗？",
+          "a": "冰柜里大量食材都是素的，野生菌菇炒饭更是专为素食者而做。但请注意，我们多数汤底以猪骨或牛骨起锅，选汤底前请先询问店员。"
+        },
+        {
+          "q": "是清真认证吗？",
+          "a": "不是。我们在澳大利亚并未取得清真认证，招牌汤底以猪骨熬制。与其让您落座后才发现，不如提前讲清楚。"
+        },
+        {
+          "q": "需要订位吗？",
+          "a": "不需要。直接进店，拿碗，到秤前排队即可。我们多数门店为翻台而设，不接受订位。"
+        }
+      ]
+    }
+  },
+  "stores": {
+    "en": {
+      "kicker": "Locations",
+      "h1": "Twenty shops. Four states. One broth recipe.",
+      "sub": "Melbourne, Brisbane, the Gold Coast, Perth and Adelaide.",
+      "filterAll": "All",
+      "newTag": "Just opened"
+    },
+    "zh": {
+      "kicker": "门店",
+      "h1": "二十家店，四个州，同一锅汤底。",
+      "sub": "墨尔本、布里斯班、黄金海岸、珀斯与阿德莱德。",
+      "filterAll": "全部",
+      "newTag": "新店开业"
+    }
+  },
+  "promotions": {
+    "en": {
+      "kicker": "Promotions",
+      "h1": "What's on right now",
+      "sub": "Opening specials, seasonal boxes and app-only vouchers. When they're gone, they're gone.",
+      "ongoing": "On now",
+      "ended": "Ended"
+    },
+    "zh": {
+      "kicker": "优惠活动",
+      "h1": "当前活动",
+      "sub": "开业特惠、节令礼盒与应用专属代金券。售完即止。",
+      "ongoing": "进行中",
+      "ended": "已结束"
+    }
+  },
+  "news": {
+    "en": {
+      "kicker": "What's new",
+      "h1": "Notes from the pot",
+      "sub": "New shops, new broths, and the occasional attempt to explain where hot pot actually came from."
+    },
+    "zh": {
+      "kicker": "最新消息",
+      "h1": "锅边记事",
+      "sub": "新店、新汤底，偶尔也认真聊聊火锅到底从哪儿来。"
+    }
+  },
+  "franchise": {
+    "en": {
+      "kicker": "Franchise",
+      "h1": "Twenty shops in eight years. The model travels.",
+      "sub": "David's Master Pot is the flagship brand of David's Management Group. We opened on Melbourne's busiest street in 2018 and have not stopped since.",
+      "pitchH": "Why this model works",
+      "pitch": [
+        {
+          "t": "No chefs to hire",
+          "d": "Guests build their own bowls. Your kitchen simmers broth and runs a scale, which makes staffing dramatically simpler than a full à la carte kitchen."
+        },
+        {
+          "t": "Waste stays low",
+          "d": "Self-serve by weight means you prep to demand, not to a fixed menu. Ingredients that don't sell today are still ingredients tomorrow."
+        },
+        {
+          "t": "Small footprint, fast turnover",
+          "d": "Our shops are built for volume in tight retail sites. Food courts, high streets and shopping centres all work."
+        },
+        {
+          "t": "A brand people already queue for",
+          "d": "You are not explaining a new concept to the market. Malatang already has an audience in Australia, and they already know the name."
+        }
+      ],
+      "timelineH": "How we got here",
+      "formH": "Start the conversation",
+      "formSub": "Tell us where you are looking and we will send the info pack.",
+      "fields": {
+        "name": "Name",
+        "phone": "Phone number",
+        "email": "Email address",
+        "subject": "Location you're interested in",
+        "message": "Anything else we should know"
+      }
+    },
+    "zh": {
+      "kicker": "加盟合作",
+      "h1": "八年二十店，这套模式走得通。",
+      "sub": "David's Master Pot 是 David's Management Group 的旗舰品牌。2018 年我们在墨尔本最繁忙的街道开出第一家店，此后从未停步。",
+      "pitchH": "这套模式为何成立",
+      "pitch": [
+        {
+          "t": "不必聘请厨师",
+          "d": "顾客自己配碗，后厨只需熬汤与过秤，人力结构远比传统点菜厨房简单。"
+        },
+        {
+          "t": "损耗天然低",
+          "d": "按重量自选意味着按需备货，而非迁就固定菜单。今天没卖完的食材，明天照样是食材。"
+        },
+        {
+          "t": "面积小，翻台快",
+          "d": "门店专为紧凑铺位的高客流设计，美食广场、临街商铺与购物中心皆可落地。"
+        },
+        {
+          "t": "无需向市场解释的品牌",
+          "d": "麻辣烫在澳大利亚已有稳定客群，而他们已经认得这个名字。"
+        }
+      ],
+      "timelineH": "一路走来",
+      "formH": "聊一聊",
+      "formSub": "告诉我们您看中的区域，我们会把加盟资料寄给您。",
+      "fields": {
+        "name": "姓名",
+        "phone": "联系电话",
+        "email": "电子邮箱",
+        "subject": "意向区域",
+        "message": "其他想让我们知道的信息"
+      }
+    }
+  },
+  "club": {
+    "en": {
+      "kicker": "Club David",
+      "h1": "Dine divine, rewards align.",
+      "sub": "Over $200 of vouchers the day you join, and a discount that never expires.",
+      "howH": "How it works",
+      "how": [
+        {
+          "n": "01",
+          "t": "Dine in",
+          "d": "At any of our twenty shops across Australia."
+        },
+        {
+          "n": "02",
+          "t": "Show your member ID",
+          "d": "To staff when you pay the bill."
+        },
+        {
+          "n": "03",
+          "t": "Collect points",
+          "d": "Redeem against your bill or for products in the app."
+        },
+        {
+          "n": "04",
+          "t": "Level up",
+          "d": "Spend more, climb tiers, and keep a bigger permanent discount."
+        }
+      ],
+      "tiersH": "Five tiers",
+      "tiers": [
+        {
+          "n": "Level 1",
+          "t": "David's Friend"
+        },
+        {
+          "n": "Level 2",
+          "t": "David's Snacker"
+        },
+        {
+          "n": "Level 3",
+          "t": "David's Patron"
+        },
+        {
+          "n": "Level 4",
+          "t": "David's Regular"
+        },
+        {
+          "n": "Level 5",
+          "t": "David's Connoisseur"
+        }
+      ],
+      "perksH": "What you get",
+      "perks": [
+        "100 points for every $20 spent",
+        "Redeem premium gifts",
+        "Discounted meal tickets",
+        "A lifetime discount that grows with your tier"
+      ],
+      "appH": "Get the app",
+      "appBody": "10% off your first order when you download. In-app ordering is coming, with no handling or platform fees, digital coupons at checkout and pickup at your nearest shop."
+    },
+    "zh": {
+      "kicker": "大卫会员",
+      "h1": "吃得越尽兴，回馈越丰厚。",
+      "sub": "注册当天即得超过 200 澳元代金券，以及一份永不过期的折扣。",
+      "howH": "如何运作",
+      "how": [
+        {
+          "n": "01",
+          "t": "到店用餐",
+          "d": "全澳二十家门店均可。"
+        },
+        {
+          "n": "02",
+          "t": "出示会员码",
+          "d": "结账时向店员出示即可。"
+        },
+        {
+          "n": "03",
+          "t": "累积积分",
+          "d": "可抵扣餐费，也可在应用内兑换商品。"
+        },
+        {
+          "n": "04",
+          "t": "提升等级",
+          "d": "消费越多，等级越高，永久折扣越大。"
+        }
+      ],
+      "tiersH": "五个等级",
+      "tiers": [
+        {
+          "n": "一级",
+          "t": "大卫之友"
+        },
+        {
+          "n": "二级",
+          "t": "大卫食客"
+        },
+        {
+          "n": "三级",
+          "t": "大卫常客"
+        },
+        {
+          "n": "四级",
+          "t": "大卫熟客"
+        },
+        {
+          "n": "五级",
+          "t": "大卫知味"
+        }
+      ],
+      "perksH": "会员权益",
+      "perks": [
+        "每消费 20 澳元累积 100 分",
+        "兑换精选礼品",
+        "专属折扣餐券",
+        "随等级增长的终身折扣"
+      ],
+      "appH": "下载应用",
+      "appBody": "下载即享首单 9 折。应用内点单即将上线：免手续费与平台费，结账可用电子券，并支持就近门店自取。"
+    }
+  },
+  "contact": {
+    "en": {
+      "kicker": "Contact",
+      "h1": "Say hello",
+      "sub": "Feedback, media, catering or a question about an order. We read everything.",
+      "fields": {
+        "name": "Name",
+        "email": "Email address",
+        "subject": "Subject",
+        "message": "Your message"
+      }
+    },
+    "zh": {
+      "kicker": "联系我们",
+      "h1": "打个招呼",
+      "sub": "意见反馈、媒体合作、宴会订餐，或任何关于订单的疑问，我们都会看。",
+      "fields": {
+        "name": "姓名",
+        "email": "电子邮箱",
+        "subject": "主题",
+        "message": "留言内容"
+      }
+    }
+  },
+  "notFound": {
+    "en": {
+      "h1": "This bowl is empty",
+      "sub": "The page you're after isn't here. The broth, however, is still on."
+    },
+    "zh": {
+      "h1": "这碗是空的",
+      "sub": "您要找的页面不在这里。不过，汤还在锅里咕嘟着。"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "dmp", "runtimeExecutable": "npx", "runtimeArgs": ["-y","serve","build","-l","4700","--no-clipboard"], "port": 4700 }
+  ]
+}

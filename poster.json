@@ -1,0 +1,52 @@
+{
+ "brand": "davids-master-pot",
+ "format": "poster",
+ "out": "out",
+ "prefix": "dmp-poster",
+ "pages": [
+  {
+   "label": "招牌 &middot; Signature",
+   "counter": "咖喱海鮮鍋",
+   "blocks": [
+    {
+     "t": "gap",
+     "h": 54
+    },
+    {
+     "t": "cjk",
+     "size": 300,
+     "css": "letter-spacing:.01em;position:relative;z-index:2",
+     "text": "一鍋"
+    },
+    {
+     "t": "cjk",
+     "size": 300,
+     "css": "margin-top:6px;letter-spacing:.01em;position:relative;z-index:2",
+     "text": "整片海"
+    },
+    {
+     "t": "gap",
+     "h": 26
+    },
+    {
+     "t": "html",
+     "html": "<div style=\"position:relative;z-index:2;display:flex;align-items:flex-end;gap:38px\"><div style=\"font-family:var(--f);font-size:31px;font-weight:700;letter-spacing:.20em;text-transform:uppercase;line-height:1.45;color:#F5EEDC\">The whole sea.<br>In one pot.</div><div style=\"flex:1;height:1px;background:rgba(245,238,220,.34);margin-bottom:14px\"></div><div style=\"font-family:var(--f);font-size:20px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(245,238,220,.72);margin-bottom:6px\">Curry seafood pot</div></div>"
+    },
+    {
+     "t": "cutout",
+     "src": "bowl-placeholder.png",
+     "x": "52%",
+     "y": "80%",
+     "size": 700,
+     "z": "1",
+     "shadow": "0 46px 110px rgba(90,6,10,.55)"
+    },
+    {
+     "t": "spacer"
+    }
+   ],
+   "footnote": "12+ venues across Australia &middot; 4.8 on TripAdvisor",
+   "bodycss": "position:relative"
+  }
+ ]
+}

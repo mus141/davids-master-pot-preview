@@ -1,0 +1,261 @@
+{
+  "soupBases": [
+    {
+      "id": "stir-fry-spicy-pot",
+      "img": "soup/stir-fry-spicy-pot.png",
+      "en": {
+        "name": "Signature Stir-Fry Spicy Pot",
+        "blurb": "Wok-tossed, dry-fried and deeply numbing. Our house signature."
+      },
+      "zh": {
+        "name": "招牌干锅麻辣",
+        "blurb": "大火爆炒，干香麻辣，本店招牌。"
+      },
+      "allergens": [
+        "Gluten",
+        "Crustaceans",
+        "Fish",
+        "Peanuts",
+        "Sesame",
+        "Soy",
+        "Beef"
+      ],
+      "heat": 3
+    },
+    {
+      "id": "spicy-malatang",
+      "img": "soup/spicy-malatang.png",
+      "en": {
+        "name": "Signature Spicy Malatang",
+        "blurb": "The Sichuan street classic. Numbing, fiery, endlessly customisable."
+      },
+      "zh": {
+        "name": "招牌麻辣烫",
+        "blurb": "四川街头经典，麻辣鲜香，随心自选。"
+      },
+      "allergens": [
+        "Crustaceans",
+        "Milk",
+        "Peanuts",
+        "Sesame",
+        "Soy",
+        "Beef",
+        "Pork"
+      ],
+      "heat": 3
+    },
+    {
+      "id": "sichuan-dry-mix",
+      "img": "soup/sichuan-dry-mix.png",
+      "en": {
+        "name": "Sichuan Dry Mix",
+        "blurb": "No broth, all sauce. Tossed in chilli, sesame and Sichuan pepper."
+      },
+      "zh": {
+        "name": "四川拌菜",
+        "blurb": "无汤底，全靠酱香。辣椒、芝麻与花椒拌匀。"
+      },
+      "allergens": [
+        "Gluten",
+        "Crustaceans",
+        "Peanuts",
+        "Sesame",
+        "Soy",
+        "Beef"
+      ],
+      "heat": 2
+    },
+    {
+      "id": "pork-bone",
+      "img": "soup/pork-bone.png",
+      "en": {
+        "name": "Pork Bone Soup",
+        "blurb": "Slow-simmered for hours until milky, rich and mellow."
+      },
+      "zh": {
+        "name": "猪骨浓汤",
+        "blurb": "慢火熬煮数小时，奶白浓郁，温润醇厚。"
+      },
+      "allergens": [
+        "Crustaceans",
+        "Milk",
+        "Peanuts",
+        "Sesame",
+        "Soy",
+        "Beef"
+      ],
+      "heat": 0
+    },
+    {
+      "id": "golden-pickled",
+      "img": "soup/golden-pickled.png",
+      "en": {
+        "name": "Golden Pickled Soup",
+        "blurb": "Bright, sour and golden. Pickled greens cut straight through the richness."
+      },
+      "zh": {
+        "name": "金汤酸菜",
+        "blurb": "金黄酸爽，酸菜解腻，开胃醒神。"
+      },
+      "allergens": [
+        "Sesame",
+        "Soy",
+        "Pork"
+      ],
+      "heat": 1
+    },
+    {
+      "id": "tomato",
+      "img": "soup/tomato.png",
+      "en": {
+        "name": "Sweet & Savoury Tomato Soup",
+        "blurb": "Sweet, tangy and gentle. The one everyone agrees on."
+      },
+      "zh": {
+        "name": "香甜番茄汤",
+        "blurb": "酸甜温和，不辣不燥，老少皆宜。"
+      },
+      "allergens": [
+        "Sesame",
+        "Soy",
+        "Pork"
+      ],
+      "heat": 0
+    },
+    {
+      "id": "coconut-laksa",
+      "img": "soup/coconut-laksa.jpg",
+      "en": {
+        "name": "Fragrant Coconut Laksa Soup",
+        "blurb": "Southeast Asia meets Sichuan. Creamy coconut with a slow-building warmth."
+      },
+      "zh": {
+        "name": "香浓椰香叻沙",
+        "blurb": "东南亚风味遇上四川，椰香醇厚，辣意渐起。"
+      },
+      "allergens": [
+        "Gluten",
+        "Crustaceans",
+        "Fish",
+        "Peanuts",
+        "Egg",
+        "Sesame",
+        "Soy",
+        "Beef"
+      ],
+      "heat": 2
+    }
+  ],
+  "snacks": [
+    {
+      "id": "prawn-spring-rolls",
+      "img": "snack/prawn-spring-rolls.png",
+      "en": {
+        "name": "Crispy Prawn Spring Rolls",
+        "blurb": "Light, golden, and shatteringly crisp pastry sheets wrapped around a juicy, seasoned prawn filling. The perfect crunchy bite to start your meal."
+      },
+      "zh": {
+        "name": "香脆鲜虾春卷",
+        "blurb": "金黄酥脆的薄皮包裹多汁调味虾馅，开胃第一口就要够脆。"
+      }
+    },
+    {
+      "id": "crispy-pork",
+      "img": "snack/crispy-pork.png",
+      "en": {
+        "name": "Fried Crispy Pork",
+        "blurb": "Premium pork neck pieces lightly battered and fried to a perfect golden crunch, then tossed in a subtle, aromatic spice seasoning. A wonderful contrast of crispy outside and tender inside."
+      },
+      "zh": {
+        "name": "香酥炸猪颈肉",
+        "blurb": "精选猪颈肉薄裹脆浆炸至金黄，再撒上淡淡椒香调味，外酥里嫩。"
+      }
+    },
+    {
+      "id": "sesame-doughnut",
+      "img": "snack/sesame-doughnut.png",
+      "en": {
+        "name": "Golden Red Bean Sesame Doughnut",
+        "blurb": "Golden, crispy pastry puffs coated in toasted sesame seeds, opening up to a warm, sweet, and smooth red bean paste centre."
+      },
+      "zh": {
+        "name": "金黄芝麻红豆球",
+        "blurb": "外层滚满烤香芝麻，咬开是温热细腻的红豆沙。"
+      }
+    },
+    {
+      "id": "mochi",
+      "img": "snack/mochi.png",
+      "en": {
+        "name": "Crispy Mochi with Sticky Brown Sugar Glaze",
+        "blurb": "Crispy on the outside with a wonderfully chewy, mochi-like centre, generously drizzled with a rich, sticky brown sugar syrup."
+      },
+      "zh": {
+        "name": "黑糖脆皮麻糬",
+        "blurb": "外层酥脆，内里软糯拉丝，淋上浓稠黑糖糖浆。"
+      }
+    },
+    {
+      "id": "wonton-soup",
+      "img": "snack/wonton-soup.png",
+      "en": {
+        "name": "Pork and Prawn Wonton Soup",
+        "blurb": "Delicate, handmade wontons packed with juicy pork and prawns, served in a clean, comforting, and clear seasoned broth. Pure comfort in a bowl."
+      },
+      "zh": {
+        "name": "鲜虾猪肉馄饨汤",
+        "blurb": "手工薄皮馄饨，猪肉鲜虾双馅，配清爽调味高汤，一碗暖心。"
+      }
+    },
+    {
+      "id": "wonton-chili",
+      "img": "snack/wonton-chili.png",
+      "en": {
+        "name": "Pork and Prawn Wonton in Chilli Oil",
+        "blurb": "The same plump pork and prawn wontons, but served floating in a fragrant, fiery house-made chilli oil broth. Slippery, spicy, and incredibly satisfying."
+      },
+      "zh": {
+        "name": "红油抄手",
+        "blurb": "同样饱满的鲜虾猪肉馄饨，浸在自制红油里，滑嫩香辣，过瘾。"
+      }
+    }
+  ],
+  "rice": [
+    {
+      "id": "shallot-egg",
+      "img": "rice/shallot-egg.jpg",
+      "en": {
+        "name": "Fragrant Shallot Oil & Egg Fried Rice",
+        "blurb": "Fluffy, aromatic jasmine rice wok-fried with eggs and infused with our fragrant, house-made shallot oil. Simple, comforting, and the perfect sidekick to any spicy dish."
+      },
+      "zh": {
+        "name": "葱油蛋炒饭",
+        "blurb": "茉莉香米与鸡蛋同炒，淋入自制葱油，简单香口，配辣菜最佳。"
+      }
+    },
+    {
+      "id": "mushroom",
+      "img": "rice/mushroom.jpg",
+      "en": {
+        "name": "Umami Wild Mushroom Fried Rice",
+        "blurb": "A premium, earthy fried rice tossed with a rich, savoury paste made from Maitake mushrooms. Deeply savoury, vegetarian-friendly, and packed with umami."
+      },
+      "zh": {
+        "name": "野生菌菇炒饭",
+        "blurb": "以舞茸菌菇酱翻炒，鲜味浓郁，纯素可享。"
+      }
+    },
+    {
+      "id": "jasmine",
+      "img": "rice/jasmine.png",
+      "en": {
+        "name": "Steamed Jasmine Rice",
+        "blurb": "A simple bowl of perfectly steamed, fragrant jasmine rice to help balance out the bold spices of your meal."
+      },
+      "zh": {
+        "name": "茉莉香米饭",
+        "blurb": "一碗蒸得恰好的香米饭，平衡满桌浓烈香辣。"
+      }
+    }
+  ]
+}
